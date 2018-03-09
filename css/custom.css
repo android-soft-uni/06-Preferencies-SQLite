@@ -1,0 +1,59 @@
+.logo {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  display: block;
+  width: 120px;
+  height: 30px;
+
+  background-image: url("https://raw.githubusercontent.com/android-soft-uni/02-Intents-Lifecycle/gh-pages/css/assets/soft-uni-logo.png");
+}
+
+.reveal .oop-method {
+  position: relative;
+
+  display: block;
+  margin: 10px auto;
+  padding: 40px 25px;
+  width: 400px;
+
+  background-color: #42A5F5;
+  color: #fff;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+
+  box-shadow: 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.markdown {
+  position: relative;
+
+  font-size: 2em;
+}
+
+.markdown code {
+  color: #90CAF9;
+}
+
+.markdown-clear-styles blockquote {
+  background: none;
+  box-shadow: none;
+}
+
+.large-blockquote blockquote {
+  width: 95%;
+  font-size: 0.95em;
+  text-align: left;
+}
+
+.diagram > figure > .diagram-image {
+  padding: 25px; 
+  border-radius: 25px;
+
+  border: none;
+}
+
+.color-title {
+  color: #6ab344;
+}

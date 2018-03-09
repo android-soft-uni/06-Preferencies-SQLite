@@ -7,7 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -20,12 +20,340 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+    <link rel="stylesheet" href="css/custom.css">
 	</head>
 	<body>
 		<div class="reveal">
+      <div class="logo"></div>
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+        <!-- Slide --> 
+        <section data-background-color="#000">
+          <h1>#AndroidSoftUni</h1>
+        </section>
+
+        <!-- Slide --> 
+        <section>
+          <h1>Questions</h1>
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <h2>Udacity</h2>
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <h2>86400</h2>
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <h2>Steve jobs - Just ask</h2>
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <h2>Sandwich Demo Project</h2>
+        </section>
+
+        <!-- Slide --> 
+        <section>
+          <h1>Preferencies and SQLite</h1>
+        </section>
+
+        <!-- Slide --> 
+        <section>
+          <h1>SQLite</h1>
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <h2>Message logging</h2>
+          <h3>display levels</h3>
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <span class="oop-method">Error</span>
+          <span class="oop-method">War</span>
+          <span class="oop-method">Info</span>
+          <span class="oop-method">Debug</span>
+          <span class="oop-method">Verbose</span>
+        </section>
+
+        <!-- Slide -->
+        <section data-markdown data-background-color="#3F3F43">
+```java
+Log.x(String TAG, String message);
+```
+        </section>
+
+        <!-- Slide --> 
+        <section>
+          <h2>
+            <a href="https://developer.android.com/reference/android/util/Log.html" 
+              title="Logging" target="_blank">Logging</a>
+          </h2>
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <h2>
+            <a href="https://github.com/android-soft-uni/04-Connect-to-Internet/blob/gh-pages/Resources.md" 
+              title="Resources" target="_blank">Resources</a>
+          </h2>
+        </section>
+
+        <!-- Slide --> 
+        <section>
+          <h2>
+            <a href="https://developer.android.com/guide/topics/ui/menus.html" 
+              title="Menus" target="_blank">Menus</a>
+          </h2>
+        </section>
+
+        <!-- Slide -->
+        <section data-markdown data-background-color="#3F3F43">
+```java
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+    &lt;item android:id=&quot;@+id/new_game&quot;
+          android:icon=&quot;@drawable/ic_new_game&quot;
+          android:title=&quot;@string/new_game&quot;
+          android:showAsAction=&quot;ifRoom&quot;/&gt;
+    &lt;item android:id=&quot;@+id/help&quot;
+          android:icon=&quot;@drawable/ic_help&quot;
+          android:title=&quot;@string/help&quot; /&gt;
+&lt;/menu&gt;
+```
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <section>
+            <iframe src="https://app.sli.do/event/rqdnxw4b/embed/polls/705668" 
+              width="500" height="400" frameborder="0" scrolling="no"></iframe>
+          </section>
+
+          <section>
+            <h4>Add the showAsAction XML attribute to the menu item</h4>
+          </section>
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <h2>Github Demo Project</h2>
+        </section>
+
+        <!-- Slide -->
+        <section data-markdown data-background-color="#3F3F43">
+```java
+final static String GITHUB_BASE_URL = "https://api.github.com/search/repositories";
+final static String PARAM_QUERY = "q";
+final static String PARAM_SORT = "sort";
+```
+        </section>
+
+        <!-- Slide -->
+        <section data-markdown data-background-color="#3F3F43">
+## Uri.Builder
+```java
+Uri builtUri = Uri.parse(GITHUB_BASE_URL)
+  .buildUpon()
+  .appendQueryParameter(PARAM_QUERY, githubSearchQuery)
+  .appendQueryParameter(PARAM_SORT, sortBy)
+  .build();
+```
+        </section>
+
+        <!-- Slide -->
+        <section data-markdown data-background-color="#3F3F43">
+## Android Uri
+```java
+URL url = null;
+try {
+  url = new URL(builtUri.toString());
+} catch (MalformedURLException e) {
+  e.printStackTrace();
+}
+```
+        </section>
+
+
+        <!-- Slide --> 
+        <section>
+          <h2>
+            <a href="https://developer.android.com/guide/topics/permissions/index.html" 
+              title="App Permissions" target="_blank">App Permissions</a>
+          </h2>
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <iframe src="https://app.sli.do/event/rqdnxw4b/embed/polls/705240" width="500" height="400" frameborder="0" scrolling="no"></iframe>
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <h2>Thread Basics</h2>
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <h2>AsyncTask</h2>
+
+          <p>
+            Allows you to run a task on a background thread, 
+            while publishing results to the UI thread
+          </p>
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <span class="oop-method">onPostExecute</span>
+          <span class="oop-method">doInBackground</span>
+          <span class="oop-method">onProgressUpdate</span>
+          <span class="oop-method">onPreExecute</span>
+        </section>
+
+        <!-- Slide -->
+        <section data-markdown data-background-color="#3F3F43" class="markdown large-blockquote markdown-clear-styles">
+> `onPreExecute()`, invoked on the UI thread before the task is executed. This step is normally used to setup the task, for instance by showing a progress bar in the user interface.
+
+        </section>
+
+        <!-- Slide -->
+        <section data-markdown data-background-color="#3F3F43" class="markdown large-blockquote markdown-clear-styles">
+> `doInBackground(Params...)`, invoked on the background thread immediately after `onPreExecute()` finishes executing. This step is used to perform background computation that can take a long time. The parameters of the asynchronous task are passed to this step. The result of the computation must be returned by this step and will be passed back to the last step. This step can also use `publishProgress(Progress...)` to publish one or more units of progress. These values are published on the UI thread, in the `onProgressUpdate(Progress...)` step. 
+        </section>
+
+        <!-- Slide -->
+        <section data-markdown data-background-color="#3F3F43" class="markdown large-blockquote markdown-clear-styles">
+> `onProgressUpdate(Progress...)`, invoked on the UI thread after a call to `publishProgress(Progress...)`. The timing of the execution is undefined. This method is used to display any form of progress in the user interface while the background computation is still executing. For instance, it can be used to animate a progress bar or show logs in a text field.
+        </section>
+
+        <!-- Slide -->
+        <section data-markdown data-background-color="#3F3F43" class="markdown large-blockquote markdown-clear-styles">
+> `onPostExecute(Result)`, invoked on the UI thread after the background computation finishes. The result of the background computation is passed to this step as a parameter.
+        </section>
+
+				<!-- Slide -->
+				<section class="diagram">
+          <figure>
+            <img class="diagram-image" src="./diagrams/00-AsyncTask.png" title="Async Task" alt="Async Task" />
+          </figure>
+        </section>
+
+				<!-- Slide -->
+				<section class="diagram">
+          <figure>
+            <img class="diagram-image" src="./diagrams/01-AsyncTask.png" title="Async Task" alt="Async Task" />
+          </figure>
+        </section>
+
+				<!-- Slide -->
+				<section class="diagram">
+          <figure>
+            <img class="diagram-image" src="./diagrams/02-AsyncTask.png" title="Async Task" alt="Async Task" />
+          </figure>
+        </section>
+
+				<!-- Slide -->
+				<section class="diagram">
+          <figure>
+            <img class="diagram-image" src="./diagrams/03-AsyncTask.png" title="Async Task" alt="Async Task" />
+          </figure>
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <iframe src="https://app.sli.do/event/rqdnxw4b/embed/polls/705678" 
+						width="500" height="500" frameborder="0" scrolling="no"></iframe>
+        </section>
+
+        <!-- Slide -->
+        <section>
+          <h2><span class="color-title">J</span>ava
+            <span class="color-title">S</span>cript 
+            <span class="color-title">O</span>bject 
+            <span class="color-title">N</span>otation
+          </h2>
+        </section>
+
+        <!-- Slide -->
+        <section data-markdown data-background-color="#3F3F43">
+```javascript
+{
+   "name":"John",
+   "age":31,
+   "city":"New York",
+   "credit_cards":[
+      {
+         "number":"0000-0000-0000-0000"
+      },
+      {
+         "number":"0000-0000-0000-0001"
+      }
+   ]
+}
+```
+        </section>
+
+
+        <!-- Slide -->
+        <section data-markdown data-background-color="#3F3F43">
+##### What would the following look like as JSON?
+```
+temp
+  min = 11.34
+  max = 19.01
+weather
+  id = 801
+  condition = Clouds
+  description = few clouds
+pressure = 1023.51
+humidity = 87
+```
+        </section>
+
+        <!-- Slide -->
+        <section data-markdown data-background-color="#3F3F43">
+```javascript
+{
+   "temp":{
+      "min":11.34,
+      "max":19.01
+   },
+   "weather":{
+      "id":801,
+      "condition":"Clouds",
+      "description":"few clouds"
+   },
+   "pressure":1023.51,
+   "humidity":87
+}
+```
+        </section>
+
+        <!-- Slide -->
+        <section data-markdown data-background-color="#3F3F43">
+```java
+JSONObject weatherCondition = new JSONObject(weatherDataJSONString);
+
+
+// optString()
+// Returns the value mapped by name if it exists, 
+// coercing it if necessary, 
+// or the empty string if no such mapping exists.
+
+// Temp
+JSONObject temp = weatherCondition.getJSONObject("temp");
+String min = temp.optString("min");
+String max = temp.optString("max");
+```
+        </section>
+
 			</div>
 		</div>
 
